@@ -8,7 +8,9 @@ dotenv.config();
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+    origin: 'https://thriving-peony-01c5d9.netlify.app/' // Replace with your ACTUAL Netlify URL
+}));
 app.use(express.json());
 
 app.get("/", (req, res) => {
